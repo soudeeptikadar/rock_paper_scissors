@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #9cad84; /* Sage green */
+}
+
+/* General Button Styles */
+button {
+    border: none;
+    color: #121212; /* Dark text on button */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Start Game Button */
+#startGame {
+    background-color: #9cad84; /* Sage green */
+    margin-bottom: 20px;
+}
+
+#startGame:hover {
+    background-color: #8ca470; /* Darker sage green */
+    transform: scale(1.05); /* Slightly scale up */
+}
+
+/* Choice Buttons */
+.choice-button {
+    background-color: #9cad84; /* Sage green */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.choice-button:hover {
+    background-color: #8ca470; /* Darker sage green */
+    transform: scale(1.05); /* Slightly scale up */
+}
+
+/* Restart Game Button */
+#restartGame {
+    background-color: #f44336; /* Red background for prominence */
+    color: #fff; /* White text */
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 1.5rem; /* Larger font size */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Space above the button */
+}
+
+#restartGame:hover {
+    background-color: #df1d0f; /* Slightly darker red on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.scoreboard div {
+    font-size: 1.5rem;
+}
+
+/* Result Message */
+.result-message {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    animation: fadeIn 1s; /* Animation for fading in */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    transition: opacity 0.3s;
+}
+
+.modal.visible {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    color: #9cad84; /* Sage green */
+    padding: 20px;
+    margin: 15% auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    animation: slideIn 0.5s; /* Animation for sliding in */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .choices {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .choice-button {
+        width: 100%;
+    }
+}
